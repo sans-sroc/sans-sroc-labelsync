@@ -7,7 +7,7 @@ colors:
   priority: &priority "#F783AC"
   scope: &scope "#27CF79"
   curriculum: &curriculum "#A5D8ff"
-  course: &course' "#EB9100"
+  course: &course "#EB9100"
 
 # Labels
 labels: &common
