@@ -61,10 +61,10 @@ repos:
   schedule:
     config:
       removeUnconfiguredLabels: true
-		labels:
+    labels:
       <<: *common
   schedule-range:
     config:
       removeUnconfiguredLabels: false
-		labels:
+    labels:
       <<: *common
