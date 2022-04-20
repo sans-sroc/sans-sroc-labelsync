@@ -54,7 +54,24 @@ labels: &common
   "course/sec549":
     color: *course
     description: Related to the SEC549 Course
-
+  "priority/p0":
+    color: *priority
+    description: Urgent, something is currently broken, no workaround
+  "priority/p1":
+    color: *priority
+    description: Something is broken, but there is a workaround
+  "priority/p2":
+    color: *priority
+    description: Will work on in the next sprint
+  "priority/p3":
+    color: *priority
+    description: Will work on in the next month
+  "priority/p4":
+    color: *priority
+    description: Will work on in the next quarter
+  "priority/p5":
+    color: *priority
+    description: Backburn, will work on when all other issues are done
 
 # Repositories
 repos:
