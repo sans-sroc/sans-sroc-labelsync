@@ -48,12 +48,25 @@ labels: &common
   "curriculum/forensics":
     color: *curriculum
     description: Related to the Forensics Curriculum
+  "curriculum/offensive":
+    color: *curriculum
+    description: Related to the Offensive Ops Curriculum
   "course/sec560":
     color: *course
     description: Related to the SEC560 Course
+    siblings: ["curriculum/offensive"]
   "course/sec549":
     color: *course
     description: Related to the SEC549 Course
+    siblings: ["curriculum/cloud"]
+  "course/sec388":
+    color: *course
+    description: Related to the SEC388 Course
+    siblings: ["curriculum/cloud"]
+  "course/sec565":
+    color: *course
+    description: Related to the SEC565 Course
+    siblings: ["curriculum/offensive"]
   "priority/p0":
     color: *priority
     description: Urgent, something is currently broken, no workaround
