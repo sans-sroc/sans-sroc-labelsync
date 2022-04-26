@@ -5,7 +5,7 @@ colors:
   status: &status "#F8F9FA"
   bug: &bug "#EE0000"
   priority: &priority "#F783AC"
-  scope: &scope "#27CF79"
+  scostape: &scope "#27CF79"
   curriculum: &curriculum "#A5D8ff"
   course: &course "#EB9100"
 
@@ -85,6 +85,12 @@ labels: &common
   "priority/p5":
     color: *priority
     description: Backburn, will work on when all other issues are done
+  "status/accepted":
+    color: *status
+    description: Issue has been accepted for work
+  "status/waiting-on-author":
+    color: *status
+    description: Issue is waiting on author for response
 
 # Repositories
 repos:
