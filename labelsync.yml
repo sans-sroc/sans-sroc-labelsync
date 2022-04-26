@@ -88,12 +88,7 @@ labels: &common
 
 # Repositories
 repos:
-  schedule:
-    config:
-      removeUnconfiguredLabels: true
-    labels:
-      <<: *common
-  schedule-ranges:
+  "*":
     config:
       removeUnconfiguredLabels: false
     labels:
