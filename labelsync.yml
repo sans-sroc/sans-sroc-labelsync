@@ -97,6 +97,6 @@ repos:
   schedule:
     labels:
       <<: *common
-  schedule-range:
+  schedule-ranges:
     labels:
       <<: *common
