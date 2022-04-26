@@ -94,8 +94,9 @@ labels: &common
 
 # Repositories
 repos:
-  "*":
-    config:
-      removeUnconfiguredLabels: false
+  schedule:
+    labels:
+      <<: *common
+  schedule-range:
     labels:
       <<: *common
