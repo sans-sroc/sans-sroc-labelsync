@@ -11,6 +11,9 @@ colors:
 
 # Labels
 labels: &common
+  "Epic": # note: this has to be Epic, ZenHub doesn't allow you to customize the Epic label format.
+    color: "#4660F9"
+    description: ZenHub Epic
   "kind/bug":
     color: *kind
     description: A reported bug.
@@ -33,6 +36,10 @@ labels: &common
     color: *kind
     description: Developer asked a question. No code changes required.
     alias: ["question"]
+  "kind/wontfix":
+    color: *kind
+    description: Will not fix or address
+    alias: ["wontfix"]
   "area/terraform":
     color: *area
     description: Issue pertains to something directly regarding terraform
