@@ -5,7 +5,7 @@ colors:
   status: &status "#F8F9FA"
   bug: &bug "#EE0000"
   priority: &priority "#F783AC"
-  scostape: &scope "#27CF79"
+  team: &team "#27CF79"
   curriculum: &curriculum "#A5D8ff"
   course: &course "#EB9100"
 
@@ -91,6 +91,15 @@ labels: &common
   "status/waiting-on-author":
     color: *status
     description: Issue is waiting on author for response
+  "team/sis":
+    color: *team
+    description: Belongs to the Student Information Systems Team and Mission
+  "team/range-eng":
+    color: *team
+    description: Belongs to the Range Engineering Team and Mission
+  "team/qa":
+    color: *team
+    description: Belongs to the QA Team and Mission
 
 # Repositories
 repos:
