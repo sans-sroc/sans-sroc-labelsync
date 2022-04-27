@@ -1,0 +1,111 @@
+# Colors
+colors:
+  area: &area "#FFD700"
+  kind: &kind "#3B5BDB"
+  status: &status "#F8F9FA"
+  bug: &bug "#EE0000"
+  priority: &priority "#F783AC"
+  team: &team "#27CF79"
+  curriculum: &curriculum "#A5D8ff"
+  course: &course "#EB9100"
+
+# Labels
+labels: &common
+  "kind/bug":
+    color: *kind
+    description: A reported bug.
+    alias: ["bug"]
+  "kind/feature":
+    color: *kind
+    description: A request for a new feature.
+    alias: ["enhancement"]
+  "kind/improvement":
+    color: *kind
+    description: An improvement to existing feature and code.
+  "kind/docs":
+    color: *kind
+    description: A documentation change is required.
+    alias: ["documentation"]
+  "kind/discussion":
+    color: *kind
+    description: Discussion is required.
+  "kind/question":
+    color: *kind
+    description: Developer asked a question. No code changes required.
+    alias: ["question"]
+  "area/terraform":
+    color: *area
+    description: Issue pertains to something directly regarding terraform
+  "area/os/windows":
+    color: *area
+    description: Issue pertaining to Windows
+  "area/os/linux":
+    color: *area
+    description: Issue pertaining to Linux
+  "curriculum/cloud":
+    color: *curriculum
+    description: Appart of the Cloud Curriculum
+  "curriculum/forensics":
+    color: *curriculum
+    description: Related to the Forensics Curriculum
+  "curriculum/offensive":
+    color: *curriculum
+    description: Related to the Offensive Ops Curriculum
+  "course/sec560":
+    color: *course
+    description: Related to the SEC560 Course
+    siblings: ["curriculum/offensive"]
+  "course/sec549":
+    color: *course
+    description: Related to the SEC549 Course
+    siblings: ["curriculum/cloud"]
+  "course/sec388":
+    color: *course
+    description: Related to the SEC388 Course
+    siblings: ["curriculum/cloud"]
+  "course/sec565":
+    color: *course
+    description: Related to the SEC565 Course
+    siblings: ["curriculum/offensive"]
+  "priority/p0":
+    color: *priority
+    description: Urgent, something is currently broken, no workaround
+  "priority/p1":
+    color: *priority
+    description: Something is broken, but there is a workaround
+  "priority/p2":
+    color: *priority
+    description: Will work on in the next sprint
+  "priority/p3":
+    color: *priority
+    description: Will work on in the next month
+  "priority/p4":
+    color: *priority
+    description: Will work on in the next quarter
+  "priority/p5":
+    color: *priority
+    description: Backburn, will work on when all other issues are done
+  "status/accepted":
+    color: *status
+    description: Issue has been accepted for work
+  "status/waiting-on-author":
+    color: *status
+    description: Issue is waiting on author for response
+  "team/sis":
+    color: *team
+    description: Belongs to the Student Information Systems Team and Mission
+  "team/range-eng":
+    color: *team
+    description: Belongs to the Range Engineering Team and Mission
+  "team/qa":
+    color: *team
+    description: Belongs to the QA Team and Mission
+
+# Repositories
+repos:
+  schedule:
+    labels:
+      <<: *common
+  schedule-ranges:
+    labels:
+      <<: *common
