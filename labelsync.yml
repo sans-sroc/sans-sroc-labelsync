@@ -82,6 +82,10 @@ labels: &common
     color: *course
     description: Related to the SEC565 Course
     siblings: ["curriculum/offensive"]
+  "course/sec588":
+    color: *course
+    description: Related to the SEC588 Course
+    siblings: ["curriculum/cloud"]
   "priority/p0":
     color: *priority
     description: Urgent, something is currently broken, no workaround
