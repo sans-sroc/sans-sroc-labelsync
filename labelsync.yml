@@ -66,6 +66,14 @@ labels: &common
     color: *course
     description: Related to the SEC549 Course
     siblings: ["curriculum/cloud"]
+  "course/sec542":
+    color: *course
+    description: Related to the SEC542 Course
+    siblings: ["curriculum/offensive"]
+  "course/sec598":
+    color: *course
+    description: Related to the SEC598 Course
+    siblings: ["curriculum/cloud"]
   "course/sec388":
     color: *course
     description: Related to the SEC388 Course
