@@ -73,7 +73,7 @@ labels: &common
     color: *area
     description: Issue pertaining to Windows
     alias: ["area/os/windows", "os:windows"]
-  "area/windows/exchange":
+  "area/windows/ad":
     color: *area
     description: Issues or Pull Requests pertaining to Windows Active Directory
   "area/windows/exchange":
