@@ -26,11 +26,15 @@ labels: &common
   "kind/bug":
     color: *kind
     description: A reported bug.
-    alias: ["bug"]
+    alias: ["bug", "type:fix"]
+  "kind/chore":
+    color: *kind
+    description: A chore
+    alias: ["type:chore"]
   "kind/feature":
     color: *kind
     description: A request for a new feature.
-    alias: ["enhancement"]
+    alias: ["enhancement", "type:feat"]
   "kind/improvement":
     color: *kind
     description: An improvement to existing feature and code.
@@ -49,15 +53,36 @@ labels: &common
     color: *kind
     description: Will not fix or address
     alias: ["wontfix"]
+  "kind/requirement":
+    color: *kind
+    description: A requirement as laid out by the author
+    alias: ["type:requirement", "type:blueprint"]
+  "area/aws":
+    color: *area
+    description: Issue pertains to something directly regarding AWS
+  "area/azure":
+    color: *area
+    description: Issue pertains to something directly regarding Azure
   "area/terraform":
     color: *area
     description: Issue pertains to something directly regarding terraform
-  "area/os/windows":
+  "area/monitoring":
+    color: *area
+    description: Issues or Pull Requests pertaining to monitoring
+  "area/windows":
     color: *area
     description: Issue pertaining to Windows
-  "area/os/linux":
+    alias: ["area/os/windows", "os:windows"]
+  "area/windows/ad":
+    color: *area
+    description: Issues or Pull Requests pertaining to Windows Active Directory
+  "area/windows/exchange":
+    color: *area
+    description: Issues or Pull Requests pertaining to Windows Exchange
+  "area/linux":
     color: *area
     description: Issue pertaining to Linux
+    alias: ["area/os/linux", "os:linux"]
   "curriculum/cloud":
     color: *curriculum
     description: Appart of the Cloud Curriculum
@@ -123,6 +148,11 @@ labels: &common
   "status/waiting-on-author":
     color: *status
     description: Issue is waiting on author for response
+    alias: ["status:waiting-on-author"]
+  "status/on-hold":
+    color: *status
+    description: Issue or Pull Request is on hold
+    alias: ["status:on-hold"]
   "team/sis":
     color: *team
     description: Belongs to the Student Information Systems Team and Mission
@@ -132,6 +162,9 @@ labels: &common
   "team/qa":
     color: *team
     description: Belongs to the QA Team and Mission
+  "bot":
+    color: "#5050FC"
+    description: Issues belonging to a bot
 
 # Repositories
 repos:
@@ -139,5 +172,14 @@ repos:
     labels:
       <<: *common
   schedule-ranges:
+    labels:
+      <<: *common
+  sec565-tf-aws-ctf:
+    labels:
+      <<: *common
+  sec565-tf-aws-labs:
+    labels:
+      <<: *common
+  sec549-tf-aws-labs:
     labels:
       <<: *common
