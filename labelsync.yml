@@ -10,7 +10,7 @@ colors:
   curriculum: &curriculum "#A5D8ff"
   course: &course "#EB9100"
 
-schedule: &schedule:
+schedule: &schedule
   "curriculum/cloud":
     color: *curriculum
     description: Appart of the Cloud Curriculum
