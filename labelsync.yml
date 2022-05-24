@@ -103,7 +103,7 @@ labels: &common
   "kind/requirement":
     color: *kind
     description: A requirement as laid out by the author
-    alias: ["type:requirement", "type:blueprint"]
+    alias: ["type:requirement", "type:blueprint", "requirement"]
   "area/aws":
     color: *area
     description: Issue pertains to something directly regarding AWS
