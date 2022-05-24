@@ -74,6 +74,10 @@ labels: &common
     color: *kind
     description: A chore
     alias: ["type:chore"]
+  "kind/duplicate":
+    color: *kind
+    description: Duplicate issue
+    alias: ["duplicate"]
   "kind/feature":
     color: *kind
     description: A request for a new feature.
