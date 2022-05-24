@@ -11,6 +11,10 @@ colors:
   course: &course "#EB9100"
 
 schedule: &schedule
+  "epic/range":
+    color: *epic
+    description: The top level epic for a Range build used for scheduling purposes.
+    siblings: ["Epic"]
   "curriculum/cloud":
     color: *curriculum
     description: Appart of the Cloud Curriculum
@@ -58,10 +62,6 @@ labels: &common
   "Epic": # note: this has to be Epic, ZenHub doesn't allow you to customize the Epic label format.
     color: *epic
     description: ZenHub Epic
-  "epic/range":
-    color: *epic
-    description: The top level epic for a Range build used for scheduling purposes.
-    siblings: ["Epic"]
   "epic/requirements":
     color: *epic
     description: Indicates a requirements issue. Use epic/range for scheduling purposes.
