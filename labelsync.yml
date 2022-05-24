@@ -10,6 +10,49 @@ colors:
   curriculum: &curriculum "#A5D8ff"
   course: &course "#EB9100"
 
+schedule: &schedule:
+  "curriculum/cloud":
+    color: *curriculum
+    description: Appart of the Cloud Curriculum
+  "curriculum/forensics":
+    color: *curriculum
+    description: Related to the Forensics Curriculum
+  "curriculum/offensive":
+    color: *curriculum
+    description: Related to the Offensive Ops Curriculum
+  "course/sec560":
+    color: *course
+    description: Related to the SEC560 Course
+    siblings: ["curriculum/offensive"]
+  "course/sec549":
+    color: *course
+    description: Related to the SEC549 Course
+    siblings: ["curriculum/cloud"]
+  "course/sec542":
+    color: *course
+    description: Related to the SEC542 Course
+    siblings: ["curriculum/offensive"]
+  "course/sec598":
+    color: *course
+    description: Related to the SEC598 Course
+    siblings: ["curriculum/cloud"]
+  "course/sec388":
+    color: *course
+    description: Related to the SEC388 Course
+    siblings: ["curriculum/cloud"]
+  "course/sec565":
+    color: *course
+    description: Related to the SEC565 Course
+    siblings: ["curriculum/offensive"]
+  "course/sec588":
+    color: *course
+    description: Related to the SEC588 Course
+    siblings: ["curriculum/cloud"]
+  "course/sec504":
+    color: *course
+    description: Related to the SEC504 Course
+    siblings: ["curriculum/forensics"]
+
 # Labels
 labels: &common
   "Epic": # note: this has to be Epic, ZenHub doesn't allow you to customize the Epic label format.
@@ -83,47 +126,6 @@ labels: &common
     color: *area
     description: Issue pertaining to Linux
     alias: ["area/os/linux", "os:linux"]
-  "curriculum/cloud":
-    color: *curriculum
-    description: Appart of the Cloud Curriculum
-  "curriculum/forensics":
-    color: *curriculum
-    description: Related to the Forensics Curriculum
-  "curriculum/offensive":
-    color: *curriculum
-    description: Related to the Offensive Ops Curriculum
-  "course/sec560":
-    color: *course
-    description: Related to the SEC560 Course
-    siblings: ["curriculum/offensive"]
-  "course/sec549":
-    color: *course
-    description: Related to the SEC549 Course
-    siblings: ["curriculum/cloud"]
-  "course/sec542":
-    color: *course
-    description: Related to the SEC542 Course
-    siblings: ["curriculum/offensive"]
-  "course/sec598":
-    color: *course
-    description: Related to the SEC598 Course
-    siblings: ["curriculum/cloud"]
-  "course/sec388":
-    color: *course
-    description: Related to the SEC388 Course
-    siblings: ["curriculum/cloud"]
-  "course/sec565":
-    color: *course
-    description: Related to the SEC565 Course
-    siblings: ["curriculum/offensive"]
-  "course/sec588":
-    color: *course
-    description: Related to the SEC588 Course
-    siblings: ["curriculum/cloud"]
-  "course/sec504":
-    color: *course
-    description: Related to the SEC504 Course
-    siblings: ["curriculum/forensics"]
   "priority/p0":
     color: *priority
     description: Urgent, something is currently broken, no workaround
@@ -170,9 +172,11 @@ labels: &common
 repos:
   schedule:
     labels:
+      <<: *schedule
       <<: *common
   schedule-ranges:
     labels:
+      <<: *schedule
       <<: *common
   sec565-tf-aws-ctf:
     labels:
