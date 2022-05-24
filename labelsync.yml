@@ -171,10 +171,14 @@ labels: &common
 # Repositories
 repos:
   schedule:
+    config:
+      removeUnconfiguredLabels: true
     labels:
       <<: *schedule
       <<: *common
   schedule-ranges:
+    config:
+      removeUnconfiguredLabels: true
     labels:
       <<: *schedule
       <<: *common
