@@ -10,79 +10,11 @@ colors:
   curriculum: &curriculum "#A5D8ff"
   course: &course "#EB9100"
 
-# Labels
-labels: &common
-  "Epic": # note: this has to be Epic, ZenHub doesn't allow you to customize the Epic label format.
-    color: *epic
-    description: ZenHub Epic
+schedule: &schedule
   "epic/range":
     color: *epic
     description: The top level epic for a Range build used for scheduling purposes.
     siblings: ["Epic"]
-  "epic/requirements":
-    color: *epic
-    description: Indicates a requirements issue. Use epic/range for scheduling purposes.
-    siblings: ["Epic"]
-  "kind/bug":
-    color: *kind
-    description: A reported bug.
-    alias: ["bug", "type:fix"]
-  "kind/chore":
-    color: *kind
-    description: A chore
-    alias: ["type:chore"]
-  "kind/feature":
-    color: *kind
-    description: A request for a new feature.
-    alias: ["enhancement", "type:feat"]
-  "kind/improvement":
-    color: *kind
-    description: An improvement to existing feature and code.
-  "kind/docs":
-    color: *kind
-    description: A documentation change is required.
-    alias: ["documentation"]
-  "kind/discussion":
-    color: *kind
-    description: Discussion is required.
-  "kind/question":
-    color: *kind
-    description: Developer asked a question. No code changes required.
-    alias: ["question"]
-  "kind/wontfix":
-    color: *kind
-    description: Will not fix or address
-    alias: ["wontfix"]
-  "kind/requirement":
-    color: *kind
-    description: A requirement as laid out by the author
-    alias: ["type:requirement", "type:blueprint"]
-  "area/aws":
-    color: *area
-    description: Issue pertains to something directly regarding AWS
-  "area/azure":
-    color: *area
-    description: Issue pertains to something directly regarding Azure
-  "area/terraform":
-    color: *area
-    description: Issue pertains to something directly regarding terraform
-  "area/monitoring":
-    color: *area
-    description: Issues or Pull Requests pertaining to monitoring
-  "area/windows":
-    color: *area
-    description: Issue pertaining to Windows
-    alias: ["area/os/windows", "os:windows"]
-  "area/windows/ad":
-    color: *area
-    description: Issues or Pull Requests pertaining to Windows Active Directory
-  "area/windows/exchange":
-    color: *area
-    description: Issues or Pull Requests pertaining to Windows Exchange
-  "area/linux":
-    color: *area
-    description: Issue pertaining to Linux
-    alias: ["area/os/linux", "os:linux"]
   "curriculum/cloud":
     color: *curriculum
     description: Appart of the Cloud Curriculum
@@ -124,6 +56,80 @@ labels: &common
     color: *course
     description: Related to the SEC504 Course
     siblings: ["curriculum/forensics"]
+
+# Labels
+labels: &common
+  "Epic": # note: this has to be Epic, ZenHub doesn't allow you to customize the Epic label format.
+    color: *epic
+    description: ZenHub Epic
+  "epic/requirements":
+    color: *epic
+    description: Indicates a requirements issue. Use epic/range for scheduling purposes.
+    siblings: ["Epic"]
+  "kind/bug":
+    color: *kind
+    description: A reported bug.
+    alias: ["bug", "type:fix"]
+  "kind/chore":
+    color: *kind
+    description: A chore
+    alias: ["type:chore"]
+  "kind/duplicate":
+    color: *kind
+    description: Duplicate issue
+    alias: ["duplicate"]
+  "kind/feature":
+    color: *kind
+    description: A request for a new feature.
+    alias: ["enhancement", "type:feat"]
+  "kind/improvement":
+    color: *kind
+    description: An improvement to existing feature and code.
+  "kind/docs":
+    color: *kind
+    description: A documentation change is required.
+    alias: ["documentation"]
+  "kind/discussion":
+    color: *kind
+    description: Discussion is required.
+  "kind/question":
+    color: *kind
+    description: Developer asked a question. No code changes required.
+    alias: ["question"]
+  "kind/wontfix":
+    color: *kind
+    description: Will not fix or address
+    alias: ["wontfix"]
+  "kind/requirement":
+    color: *kind
+    description: A requirement as laid out by the author
+    alias: ["type:requirement", "type:blueprint", "requirement"]
+  "area/aws":
+    color: *area
+    description: Issue pertains to something directly regarding AWS
+  "area/azure":
+    color: *area
+    description: Issue pertains to something directly regarding Azure
+  "area/terraform":
+    color: *area
+    description: Issue pertains to something directly regarding terraform
+  "area/monitoring":
+    color: *area
+    description: Issues or Pull Requests pertaining to monitoring
+  "area/windows":
+    color: *area
+    description: Issue pertaining to Windows
+    alias: ["area/os/windows", "os:windows"]
+  "area/windows/ad":
+    color: *area
+    description: Issues or Pull Requests pertaining to Windows Active Directory
+  "area/windows/exchange":
+    color: *area
+    description: Issues or Pull Requests pertaining to Windows Exchange
+  "area/linux":
+    color: *area
+    description: Issue pertaining to Linux
+    alias: ["area/os/linux", "os:linux"]
   "priority/p0":
     color: *priority
     description: Urgent, something is currently broken, no workaround
@@ -169,10 +175,16 @@ labels: &common
 # Repositories
 repos:
   schedule:
+    config:
+      removeUnconfiguredLabels: true
     labels:
+      <<: *schedule
       <<: *common
   schedule-ranges:
+    config:
+      removeUnconfiguredLabels: true
     labels:
+      <<: *schedule
       <<: *common
   sec565-tf-aws-ctf:
     labels:
