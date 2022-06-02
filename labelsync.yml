@@ -192,3 +192,6 @@ repos:
   sec504-tf-aws-ctf:
     labels:
       <<: *common
+  sec540-tf-az-sa-bootstrap:
+    labels:
+      <<: *common
