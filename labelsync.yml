@@ -204,9 +204,6 @@ repos:
   sec588-tf-azure-capstone:
     labels:
       <<: *common
-  sec598-tf-aws-ctf:
-    labels:
-      <<: *common
   sec598-tf-aws-labs:
     labels:
       <<: *common
