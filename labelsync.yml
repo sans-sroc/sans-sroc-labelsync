@@ -195,3 +195,15 @@ repos:
   sec540-tf-az-sa-bootstrap:
     labels:
       <<: *common
+  sec588-tf-aws-labs:
+    labels:
+      <<: *common
+  sec588-tf-azure-services:
+    labels:
+      <<: *common
+  sec588-tf-azure-capstone:
+    labels:
+      <<: *common
+  sec598-tf-aws-labs:
+    labels:
+      <<: *common
